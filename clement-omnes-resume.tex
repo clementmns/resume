@@ -1,0 +1,210 @@
+%-------------------------
+% LaTeX Resume
+% Author : Clément Omnès
+% License : MIT
+% Language : English
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+% Layout
+\usepackage[empty]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+% Language & encoding
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Fonts & icons
+\usepackage[default]{lato}
+\usepackage{fontawesome5}
+
+% Styling
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear header
+\fancyfoot{} % clear footer
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.35004pt}
+
+% margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% make PDF machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------------
+% Custom commands
+% -------------------------
+
+\newcommand{\resumeItemWithDesc}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    #1 \vspace{-2pt}
+  }
+}
+
+\newcommand{\resumeItemText}[1]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item\vspace{2pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {#2} \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{3pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item\vspace{-2pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{3pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\iconWithText}[3][0.5em]{%
+  \raisebox{0.1ex}{\scalebox{0.8}{#2}}\hspace{#1}#3%
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=6pt, topsep=4pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={\scriptsize$\bullet$}, leftmargin=1.5em, itemsep=1pt, topsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+
+% -------------------------------------------
+% RESUME STARTS HERE
+% -------------------------------------------
+
+\begin{document}
+
+% HEADER
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Huge Clément Omnès} &
+  \small\begin{tabular}[b]{r}
+    \iconWithText{\faEnvelope}{\href{mailto:xxxxxxx@clementomnes.dev}{xxxxxxx@clementomnes.dev}} \\[3pt]
+    \iconWithText{\faPhone}{\href{tel:+33XXXXXXXXX}{+33 X XX XX XX XX}} \\
+  \end{tabular}
+\end{tabular*}
+\\[4pt]
+\small
+\iconWithText{\faGlobe}{\href{https://clementomnes.dev}{clementomnes.dev}}
+\hfill
+\iconWithText{\faLinkedin}{\href{https://linkedin.com/in/clementomnes}{linkedin.com/in/clementomnes}}
+\hfill
+\iconWithText{\faGithub}{\href{https://github.com/clementomnes}{github.com/clementomnes}}
+
+
+% EDUCATION
+\section{Education}
+    \resumeSubHeadingListStart
+        % - CESI Engineering School
+        \resumeSubheading
+            {CESI Engineering School}{Rouen, France}
+            {Master of Science in Computer Science and Engineering}{Oct 2025 -- Oct 2028 (Expected)}
+            \resumeItemText
+                {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+            \resumeItemText
+                {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+
+        % - Rouen University Institute of Technology
+        \resumeSubheading
+            {Rouen University Institute of Technology}{Rouen, France}
+            {Bachelor of Science in Multimedia and Internet Technologies}{Sep 2022 -- Jul 2025}
+            \resumeItemText
+                {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+            \resumeItemText
+                {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+    \resumeSubHeadingListEnd
+
+
+% EXPERIENCE
+\section{Experience}
+    \resumeSubHeadingListStart
+
+        % - R3mScore
+        \resumeSubheading
+            {R3mScore}{Rouen, France}
+            {Apprentice Software Engineer}{Sep 2024 -- Present}
+            \resumeItemListStart
+                \resumeItem
+                    {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+                \resumeItem
+                    {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+            \resumeItemListEnd
+
+            \resumeSubSubheading
+            {Software Engineer Intern}{Apr 2024 -- Jun 2024}
+            \resumeItemListStart
+                \resumeItem
+                    {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+                \resumeItem
+                    {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+            \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+% PROJECTS
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeItemWithDesc{EasySave - Open Source File Backup Software}
+            {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+        \resumeItemWithDesc{Selenite Lost Contact - Open Source Video Game}
+            {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+        \resumeItemWithDesc{ALM Vote Manager - Web Application}
+            {Describe using method: “Accomplished [X] as measured by [Y], by doing [Z].”}
+    \resumeSubHeadingListEnd
+
+
+% SKILLS
+\section{Skills}
+\textbf{Languages}{: TypeScript, Java, Python, C\#, SQL}
+    \hfill
+    \textbf{Technologies}{: React, Spring, Docker}
+
+\end{document}

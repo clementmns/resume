@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  compile:
+    name: Create resume pdf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Run build
+        uses: addnab/docker-run-action@v3
+        with:
+          image: thomasweise/docker-texlive-full:latest
+          options: -v ${{ github.workspace }}:/data
+          run: |
+            cd data
+            pdflatex clement-omnes-resume.tex
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "feat(pdf): update resume pdf"
