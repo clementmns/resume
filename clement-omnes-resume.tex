@@ -20,7 +20,7 @@
 \usepackage[T1]{fontenc} % Font encoding
 
 % Fonts & icons
-\usepackage[sfdefault, light]{roboto} % Roboto font with light weight
+\usepackage[sfdefault]{roboto} % Roboto font
 \usepackage{fontawesome5} % Icons
 
 % Styling
@@ -149,6 +149,19 @@
     \item{\small #1}%
 }
 
+% \resumeProject – project title (with optional link) + languages on the right, with leading gap
+% Usage: \resumeProject[https://url]{Project Name}{TypeScript, React}
+\newcommand{\resumeProject}[3][]{%
+    \vspace{6pt}%
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}%
+        \ifstrempty{#1}%
+            {\textbf{\small #2}}%
+            {\textbf{\small \href{#1}{#2}\hspace{0.4em}\faExternalLink*}}%
+        & {\small #3}%
+    \end{tabular*}%
+    \vspace{-1pt}%
+}
+
 % \sectionGap – trailing pad after a section block
 \newcommand{\sectionGap}{\vspace{4pt}}
 
@@ -165,7 +178,9 @@
     {\Huge \textbf{Clément Omnès}} \\[0.5em]
     \iconWithText{\faEnvelope}{\href{mailto:xxxxxxx@clementomnes.dev}{xxxxxxx@clementomnes.dev}}
     \hspace{1.2em}
-    \iconWithText{\faPhone}{\href{tel:+33XXXXXXXXX}{+33 X XX XX XX XX}}\\[2pt]
+    \iconWithText{\faPhone}{\href{tel:+33XXXXXXXXX}{+33 X XX XX XX XX}}
+    \hspace{1.2em}
+    \iconWithText{\faFlag}{French citizen}\\[2pt]
     \iconWithText{\faGithub}{\href{https://github.com/clementomnes}{github.com/clementomnes}}
     \hspace{1.2em}
     \iconWithText{\faLinkedin}{\href{https://linkedin.com/in/clementomnes}{linkedin.com/in/clementomnes}}
@@ -178,11 +193,14 @@
 % SKILLS
 % ----------
 \section{Skills}
-{\small
-    \textbf{Languages}{: TypeScript, Java, Python, C\#, SQL}
-    \hfill
-    \textbf{Technologies}{: React, Spring, Docker}
-}
+
+\resumeDescListStart
+    \resumeItemWithDesc{Languages}
+        {JavaScript, TypeScript, Java, Python, CSS, HTML, C\#, SQL}
+    \resumeItemWithDesc{Technologies}
+        {Git, Linux, React, Spring, Docker, Next.js, Nest.js, Unity}
+\resumeDescListEnd
+
 \sectionGap
 
 
@@ -193,15 +211,14 @@
 
 \resumeFirstEntry{CESI Engineering School}{Rouen, France}
 \resumeRole[CGPA: X.X / 4.0]{Master of Science in Computer Science and Engineering}{Oct 2025 -- Oct 2028 (Expected)}
-\resumeItemText{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-\resumeItemText{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemText{Relevant coursework: Distributed Application Development, Software Architecture \& Engineering, System Programming (.NET), Software Modelling \& Versioning, SI Administration \& Security}
+\resumeItemText{Applied projects: designed and implemented distributed systems covering multithreading, non-synchronised applications, and information system security}
 
 \innerSectionGap
 
 \resumeEntry{Rouen University Institute of Technology}{Rouen, France}
 \resumeRole[CGPA: 3.7 / 4.0]{Bachelor of Science in Multimedia and Internet Technologies}{Sep 2022 -- Jul 2025}
-\resumeItemText{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-\resumeItemText{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemText{Relevant coursework: Advanced Front-End \& Back-End Development, Web Deployment \& Hosting, Cybersecurity, Interactive Devices, UX \& Experience Design}
 
 \sectionGap
 
@@ -231,14 +248,28 @@
 % PROJECTS
 % ----------
 \section{Projects}
-\resumeDescListStart
-    \resumeItemWithDesc{EasySave - Open Source File Backup Software}
-        {Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-    \resumeItemWithDesc{Selenite Lost Contact - Open Source Video Game}
-        {Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-    \resumeItemWithDesc{ALM Vote Manager - Web Application}
-        {Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-\resumeDescListEnd
+
+\resumeProject[https://github.com/clementmns/easysave]{EasySave - Open Source File Backup Software}{C\#, Avalonia, .NET 10, XUnit, GitHub Actions}
+\resumeItemListStart
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemListEnd
+
+\innerSectionGap
+
+\resumeProject[https://github.com/selenite-live]{Selenite Lost Contact - Open Source Video Game}{C\#, Unity, Docker, Next.js, GitHub Actions}
+\resumeItemListStart
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemListEnd
+
+\innerSectionGap
+
+\resumeProject{ALM Vote Manager - Associative vote application}{TypeScript, Next.js, Drizzle}
+\resumeItemListStart
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemListEnd
 
 \sectionGap
 
@@ -248,8 +279,18 @@
 % ----------------
 \section{Certifications}
 \resumeDescListStart
-    \resumeDescItem{OpQuast Web Quality Certificate}
+    \resumeItemWithDesc{OpQuast Web Quality Certificate – Advanced (875/1000)}
+        {Covering web accessibility, security, performance, and eco‑design}
 \resumeDescListEnd
+
+\sectionGap
+
+
+% -----------
+% INTERESTS
+% -----------
+\section{Interests}
+\resumeItemText{Kung Fu, Music (Kora \& trumpet player), Running, Chess}
 
 
 \end{document}
