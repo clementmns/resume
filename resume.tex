@@ -25,9 +25,9 @@
 \begin{center}
     {\Huge\textcolor{colorName}{Clément Omnès}} \\[0.5em]
     {\color{colorHeader}%
-        \iconWithText{\faEnvelope}{\href{mailto:xxxxxxx@clementomnes.dev}{xxxxxxx@clementomnes.dev}}%
+        \iconWithText{\faEnvelope}{\href{mailto:\resumeMail}{\resumeMail}}%
         \hspace{1.2em}%
-        \iconWithText{\faPhone}{\href{tel:+33XXXXXXXXX}{+33 X XX XX XX XX}}%
+        \iconWithText{\faPhone}{\href{tel:\resumePhoneLink}{\resumePhone}}%
         \hspace{1.2em}%
         \iconWithText{\faFlag}{French citizen}\\[2pt]%
         \iconWithText{\faGithub}{\href{https://github.com/clementomnes}{github.com/clementomnes}}%
@@ -87,7 +87,8 @@
     \resumeItem{Raised test coverage across critical features, reducing production incidents, by implementing JUnit and Vitest suites for backend and frontend.}
     \resumeItem{Shipped customer-facing features used daily, reducing manual operations, by building end-to-end Java/Spring and React.js modules from requirements to production.}
     \resumeItem{Eliminated type-related runtime errors across a \emsb{15,000+ line} codebase by migrating the production frontend from JavaScript to TypeScript.}
-    \resumeItem{Expanded platform AI capabilities by integrating LangChain4j into existing Java services, designing prompt flows and model orchestration APIs.}
+    \resumeItem{Expanded platform AI capabilities by integrating LangChain4j, OpenAI, and Mistral APIs into existing Java services, designing prompt flows, model orchestration APIs, and enabling features such as streaming conversations, follow-up question generation, and multilingual prompts with JSON Schema validation.}
+    \resumeItem{Built an end-to-end WhatsApp-like chatbot POC with persona selection, conversation history, file/image uploads and streaming answers, improving demo quality for AI-assisted survey analysis.}
 \resumeItemListEnd
 
 \innerSectionGap
@@ -95,7 +96,9 @@
 \resumeRole{Software Engineer Intern}{Apr 2024 -- Jun 2024}
 \resumeItemListStart
     \resumeItem{Improved inter-service data exchange by designing and integrating a RESTful API into the backend, validated with integration tests.}
-    \resumeItem{Reduced user-facing bugs by refactoring legacy business logic and UI components with cleaner state management and regression tests.}
+    \resumeItem{Simplified large-scale survey workflows by implementing Word import/export pipelines for questionnaires and translations, automatic REF renaming and validation, and safer handling of quotas, weights, and URL parameters in data exports.}
+    \resumeItem{Improved maintainability and code quality by introducing ESLint, adding unit and integration tests on collectors and reporting logic, and refactoring legacy React components and Java services to clearer, typed and tested modules.}
+    \resumeItem{Boosted team productivity by creating internal AI tools that simplified the process of organizing and analyzing open-ended survey responses including a prompt editor for refining AI queries.}
 \resumeItemListEnd
 
 \sectionGap
@@ -108,24 +111,17 @@
 
 \resumeProject[https://github.com/clementmns/easysave]{EasySave - Open Source File Backup Software}{C\#, Avalonia, .NET 10, XUnit, GitHub Actions}
 \resumeItemListStart
-    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-\resumeItemListEnd
-
-\innerSectionGap
-
-\resumeProject[https://github.com/selenite-live]{Selenite Lost Contact - Open Source Video Game}{C\#, Unity, Docker, Next.js, GitHub Actions}
-\resumeItemListStart
-    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Designed and implemented a modular backup engine (full + differential) with parallel execution and large-file throttling, improving throughput while protecting bandwidth on big datasets.}
+    \resumeItem{Developed structured logging infrastructure with JSON/XML output and optional TCP remote logging via a server (Docker) supporting mutli-users, enabling centralized log aggregation per day across backup jobs.}
+    \resumeItem{Designed the full, multi-threaded backup platform architecture end-to-end, producing UML diagrams that guided the implementation of six decoupled components (core engine, GUI, CLI, logging stack, encryption tool, and log server) and supported concurrent execution of multiple backup jobs.}
 \resumeItemListEnd
 
 \innerSectionGap
 
 \resumeProject{ALM Vote Manager - Associative vote application}{TypeScript, Next.js, Drizzle}
 \resumeItemListStart
-    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
-    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Built online voting platform handling \emsb{+100 votes per session} with authenticated ballots and real‑time result updates.}
+    \resumeItem{Implemented secure vote storage and role-based access, reducing manual result handling for the association.}
 \resumeItemListEnd
 
 \sectionGap

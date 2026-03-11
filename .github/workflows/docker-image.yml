@@ -17,10 +17,13 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: thomasweise/docker-texlive-full:latest
-          options: -v ${{ github.workspace }}:/data
+          options: -v ${{ github.workspace }}:/data -e MAIL=${{ secrets.MAIL }} -e PHONE=${{ secrets.PHONE }} -e PHONE_LINK=${{ secrets.PHONE_LINK }}
           run: |
             cd data
-            pdflatex -jobname clement-omnes-resume resume.tex
+            MAIL="${MAIL:-privacy@email.com}"
+            PHONE="${PHONE:-+33 X XX XX XX XX}"
+            PHONE_LINK="${PHONE_LINK:-+33XXXXXXXXX}"
+            pdflatex -jobname clement-omnes-resume "\def\resumeMail{$MAIL}\def\resumePhone{$PHONE}\def\resumePhoneLink{$PHONE_LINK}\input{resume}"
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "feat(pdf): update resume pdf"
