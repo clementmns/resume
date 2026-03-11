@@ -1,0 +1,109 @@
+% ---------------
+% Font weight helpers
+% ---------------
+
+% \embd – semibold text
+\newcommand{\embd}[1]{{\fontseries{sb}\selectfont #1}}
+
+% \emsb – semibold text (alias)
+\newcommand{\emsb}[1]{{\fontseries{sb}\selectfont #1}}
+
+% \emmd – medium weight text
+\newcommand{\emmd}[1]{{\fontseries{m}\selectfont #1}}
+
+
+% ---------------
+% Layout helpers
+% ---------------
+
+% \sectionGap – trailing pad after a section block
+\newcommand{\sectionGap}{\vspace{6pt}}
+
+% \innerSectionGap – gap between two roles at the same org, or two schools
+\newcommand{\innerSectionGap}{\vspace{10pt}}
+
+
+% ---------------
+% Header
+% ---------------
+
+% \iconWithText – icon followed by text
+\newcommand{\iconWithText}[3][0.5em]{%
+    \footnotesize\raisebox{0.1ex}{\scalebox{0.8}{#2}}\hspace{#1}#3%
+}
+
+
+% ---------------
+% Resume entries
+% ---------------
+
+% \resumeEntry – org + location row
+\newcommand{\resumeEntry}[2]{%
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}%
+        \textcolor{colorEntry}{\embd{#1}} & \textcolor{colorEntry}{\small #2}%
+    \end{tabular*}%
+}
+
+% \resumeRole – role / degree + date range, optional grade: \resumeRole[GPA: X]{title}{dates}
+\newcommand{\resumeRole}[3][]{%
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}%
+        \textcolor{colorRole}{\embd{\textit{#2}}\ifstrempty{#1}{}{\embd{\ --\  #1}}} & \textcolor{colorRole}{\textit{#3}}%
+    \end{tabular*}%
+}
+
+% \resumeProject – project title (with optional link) + tech stack on the right
+% Usage: \resumeProject[https://url]{Project Name}{TypeScript, React}
+\newcommand{\resumeProject}[3][]{%
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}%
+        \textcolor{colorProject}{\ifstrempty{#1}%
+            {\embd{\textit{#2}}}%
+            {\embd{\textit{\href{#1}{#2}}}\hspace{0.3em}\scalebox{0.7}{\faExternalLink*}}}%
+        & \textcolor{colorProject}{\small #3}%
+    \end{tabular*}%
+}
+
+
+% ---------------
+% Item lists
+% ---------------
+
+% \resumeItemText – plain description line
+\newcommand{\resumeItemText}[1]{%
+    {\small\textcolor{colorBody}{#1}}\par%
+}
+
+% Bullet-item list
+\newcommand{\resumeItemListStart}{%
+    \begin{itemize}[%
+        label={\scriptsize$\bullet$},%
+        leftmargin=1.5em,%
+        itemsep=1pt,%
+        topsep=0pt,%
+        partopsep=0pt,%
+        parsep=0pt%
+    ]%
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\newcommand{\resumeItem}[1]{\item\small{\textcolor{colorBody}{#1}}}
+
+% Flat label-less list (Skills, Certifications)
+\newcommand{\resumeDescListStart}{%
+    \begin{itemize}[%
+        leftmargin=0pt,%
+        label={},%
+        itemsep=2pt,%
+        topsep=0pt,%
+        partopsep=0pt,%
+        parsep=0pt%
+    ]%
+}
+\newcommand{\resumeDescListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemWithDesc}[2]{%
+    \item{\textcolor{colorBody}{\emsb{\small #1}{\small : #2}}}%
+}
+
+\newcommand{\resumeDescItem}[1]{%
+    \item{\small\textcolor{colorBody}{#1}}%
+}

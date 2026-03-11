@@ -1,0 +1,43 @@
+% ---------------
+% Color palette – change these to restyle the whole resume
+% ---------------
+\definecolor{colorName}{RGB}{0, 0, 0}         % Big name in header
+\definecolor{colorHeader}{RGB}{60, 60, 60}    % Socials / icons row
+\definecolor{colorBio}{RGB}{0, 0, 0}       % Short bio text
+\definecolor{colorSection}{RGB}{0, 0, 0}      % Section titles + rule
+\definecolor{colorEntry}{RGB}{0, 0, 0}        % Org / institution name + location
+\definecolor{colorRole}{RGB}{28, 37, 84}     % Role / degree title + dates
+\definecolor{colorProject}{RGB}{0, 0, 0}      % Project name + tech stack
+\definecolor{colorBody}{RGB}{0, 0, 0}         % Bullet items, descriptions, skills
+
+
+% ---------------
+% Page layout
+% ---------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.35004pt}
+
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+% ---------------
+% Section formatting
+% ---------------
+\titleformat{\section}{
+    \large\raggedright\embd
+}{}{0em}{\color{colorSection}}[\color{colorSection}\titlerule]
+
+\titlespacing*{\section}{0pt}{10pt}{4pt}

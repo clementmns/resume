@@ -1,0 +1,153 @@
+%-------------------------
+% LaTeX Resume
+% Author : Clément Omnès
+% License : MIT
+% Language : English
+%------------------------
+
+\documentclass[a4paper,9pt]{article}
+
+\input{config/config}
+\input{config/style}
+\input{config/commands}
+
+
+% -------------------------------------------
+% RESUME STARTS HERE
+% -------------------------------------------
+
+\begin{document}
+
+
+% ----------
+% HEADER
+% ----------
+\begin{center}
+    {\Huge\textcolor{colorName}{Clément Omnès}} \\[0.5em]
+    {\color{colorHeader}%
+        \iconWithText{\faEnvelope}{\href{mailto:xxxxxxx@clementomnes.dev}{xxxxxxx@clementomnes.dev}}%
+        \hspace{1.2em}%
+        \iconWithText{\faPhone}{\href{tel:+33XXXXXXXXX}{+33 X XX XX XX XX}}%
+        \hspace{1.2em}%
+        \iconWithText{\faFlag}{French citizen}\\[2pt]%
+        \iconWithText{\faGithub}{\href{https://github.com/clementomnes}{github.com/clementomnes}}%
+        \hspace{1.2em}%
+        \iconWithText{\faLinkedin}{\href{https://linkedin.com/in/clementomnes}{linkedin.com/in/clementomnes}}%
+        \hspace{1.2em}%
+        \iconWithText{\faGlobe}{\href{https://clementomnes.dev}{clementomnes.dev}}%
+    }
+\end{center}
+
+{\small\textcolor{colorBio}{Full-stack software engineer with hands-on production experience in Java/Spring and React.js, currently pursuing an MSc in Computer Science at CESI Engineering School.}}
+
+
+% ----------
+% SKILLS
+% ----------
+\section{Skills}
+
+\resumeDescListStart
+    \resumeItemWithDesc{Languages}
+        {JavaScript, TypeScript, Java, Python, CSS, HTML, C\#, SQL}
+    \resumeItemWithDesc{Technologies}
+        {Git, Linux, React, Spring, Docker, Next.js, Nest.js, Unity}
+\resumeDescListEnd
+
+\sectionGap
+
+
+% ----------
+% EDUCATION
+% ----------
+\section{Education}
+
+\resumeEntry{CESI Engineering School}{Rouen, France}
+\resumeRole[CGPA: X.X / 4.0]{Master of Science in Computer Science and Engineering}{Oct 2025 -- Oct 2028 (Expected)}
+\resumeItemText{Relevant coursework: Distributed Application Development, Design Patterns, Software Architecture \& Engineering, System Programming (.NET), Software Modelling \& Versioning, SI Administration \& Security}
+\resumeItemText{Applied projects: designed and implemented distributed systems covering multithreading, non-synchronised applications, and information system security}
+
+\innerSectionGap
+
+\resumeEntry{Rouen University Institute of Technology}{Rouen, France}
+\resumeRole[CGPA: 3.7 / 4.0]{Bachelor of Science in Multimedia and Internet Technologies}{Sep 2022 -- Jul 2025}
+\resumeItemText{Relevant coursework: Advanced Front-End \& Back-End Development, Web Deployment \& Hosting, Interactive Devices, UX \& Experience Design}
+
+\sectionGap
+
+
+% ----------
+% EXPERIENCE
+% ----------
+\section{Experience}
+
+\resumeEntry{R3mScore}{Rouen, France}
+\resumeRole{Apprentice Software Engineer}{Sep 2024 -- Present}
+\resumeItemListStart
+    \resumeItem{Cut frontend build time \emsb{10× (20 min → 2 min)}, boosting deployment frequency, by migrating the build pipeline to Vite.}
+    \resumeItem{Raised test coverage across critical features, reducing production incidents, by implementing JUnit and Vitest suites for backend and frontend.}
+    \resumeItem{Shipped customer-facing features used daily, reducing manual operations, by building end-to-end Java/Spring and React.js modules from requirements to production.}
+    \resumeItem{Eliminated type-related runtime errors across a \emsb{15,000+ line} codebase by migrating the production frontend from JavaScript to TypeScript.}
+    \resumeItem{Expanded platform AI capabilities by integrating LangChain4j into existing Java services, designing prompt flows and model orchestration APIs.}
+\resumeItemListEnd
+
+\innerSectionGap
+
+\resumeRole{Software Engineer Intern}{Apr 2024 -- Jun 2024}
+\resumeItemListStart
+    \resumeItem{Improved inter-service data exchange by designing and integrating a RESTful API into the backend, validated with integration tests.}
+    \resumeItem{Reduced user-facing bugs by refactoring legacy business logic and UI components with cleaner state management and regression tests.}
+\resumeItemListEnd
+
+\sectionGap
+
+
+% ----------
+% PROJECTS
+% ----------
+\section{Projects}
+
+\resumeProject[https://github.com/clementmns/easysave]{EasySave - Open Source File Backup Software}{C\#, Avalonia, .NET 10, XUnit, GitHub Actions}
+\resumeItemListStart
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemListEnd
+
+\innerSectionGap
+
+\resumeProject[https://github.com/selenite-live]{Selenite Lost Contact - Open Source Video Game}{C\#, Unity, Docker, Next.js, GitHub Actions}
+\resumeItemListStart
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemListEnd
+
+\innerSectionGap
+
+\resumeProject{ALM Vote Manager - Associative vote application}{TypeScript, Next.js, Drizzle}
+\resumeItemListStart
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+    \resumeItem{Describe using method: "Accomplished [X] as measured by [Y], by doing [Z]."}
+\resumeItemListEnd
+
+\sectionGap
+
+
+% ----------------
+% CERTIFICATIONS - FOR WEB DEV ROLES ONLY
+% ----------------
+% \section{Certifications}
+% \resumeDescListStart
+%     \resumeItemWithDesc{OpQuast Web Quality Certificate – Advanced (875/1000)}
+%         {Covering web accessibility, security, performance, and eco‑design}
+% \resumeDescListEnd
+
+% \sectionGap
+
+
+% -----------
+% INTERESTS
+% -----------
+\section{Interests}
+\resumeItemText{Kung Fu, Music (Kora \& trumpet player), Running, Chess}
+
+
+\end{document}
