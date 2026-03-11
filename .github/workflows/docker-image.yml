@@ -20,7 +20,7 @@ jobs:
           options: -v ${{ github.workspace }}:/data
           run: |
             cd data
-            pdflatex clement-omnes-resume.tex
+            pdflatex -jobname clement-omnes-resume resume.tex
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "feat(pdf): update resume pdf"
