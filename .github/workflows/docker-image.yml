@@ -20,7 +20,7 @@ jobs:
           options: -v ${{ github.workspace }}:/data -e MAIL=${{ secrets.MAIL }} -e PHONE=${{ secrets.PHONE }} -e PHONE_LINK=${{ secrets.PHONE_LINK }}
           run: |
             cd data
-            MAIL="${MAIL:-privacy@email.com}"
+            MAIL="${MAIL:-keepthat@priva.te}"
             PHONE="${PHONE:-+33 X XX XX XX XX}"
             PHONE_LINK="${PHONE_LINK:-+33XXXXXXXXX}"
             pdflatex -jobname clement-omnes-resume "\def\resumeMail{$MAIL}\def\resumePhone{$PHONE}\def\resumePhoneLink{$PHONE_LINK}\input{resume}"
