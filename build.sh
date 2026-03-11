@@ -6,7 +6,6 @@ if [ -f .env ]; then
     source .env
 fi
 
-MAIL="${MAIL:-}"
 PHONE="${PHONE:-}"
 PHONE_LINK="${PHONE_LINK:-}"
 LOCAL_OUTPUT_DIR="${LOCAL_OUTPUT_DIR:-$HOME/Downloads}"
@@ -19,6 +18,6 @@ docker run --rm -i \
     sh -c "
         mkdir -p /tmp/build &&
         pdflatex -jobname \"${OUTPUT}\" -output-directory /tmp/build \
-            \"\def\resumeMail{${MAIL}}\def\resumePhone{${PHONE}}\def\resumePhoneLink{${PHONE_LINK}}\input{resume}\" &&
+            \"\def\resumePhone{${PHONE}}\def\resumePhoneLink{${PHONE_LINK}}\input{resume}\" &&
         cp /tmp/build/${OUTPUT}.pdf /output/
     "

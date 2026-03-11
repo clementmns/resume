@@ -48,7 +48,6 @@ cp .env.example .env
 
 ```sh
 # .env
-MAIL=your@email.com
 PHONE=+33 X XX XX XX XX
 PHONE_LINK=+33XXXXXXXXX
 LOCAL_OUTPUT_DIR=$HOME/Downloads  # where the PDF is written locally
@@ -56,7 +55,7 @@ LOCAL_OUTPUT_DIR=$HOME/Downloads  # where the PDF is written locally
 
 ### GitHub Actions
 
-Add `MAIL`, `PHONE`, and `PHONE_LINK` as repository secrets:
+Add `PHONE`, and `PHONE_LINK` as repository secrets:
 **Settings → Secrets and variables → Actions → New repository secret**
 
 ## Customization
@@ -90,7 +89,7 @@ Requires a `.env` file. The PDF is written to `LOCAL_OUTPUT_DIR` (defaults to `$
 docker build -t sb2nov/latex .
 docker run --rm -i -v "$PWD":/data sb2nov/latex \
     pdflatex -jobname clement-omnes-resume \
-    "\def\resumeMail{privacy@email.com}\def\resumePhoneLink{+33XXXXXXXXX}\def\resumePhone{+33 X XX XX XX XX}\input{resume}"
+    "\def\resumePhoneLink{+33XXXXXXXXX}\def\resumePhone{+33 X XX XX XX XX}\input{resume}"
 ```
 
 ### Using a local LaTeX installation
@@ -99,7 +98,7 @@ Make sure you have a full LaTeX distribution installed (e.g. [TeX Live](https://
 
 ```sh
 pdflatex -jobname clement-omnes-resume \
-    "\def\resumeMail{privacy@email.com}\def\resumePhoneLink{+33XXXXXXXXX}\def\resumePhone{+33 X XX XX XX XX}\input{resume}"
+    "\def\resumePhoneLink{+33XXXXXXXXX}\def\resumePhone{+33 X XX XX XX XX}\input{resume}"
 ```
 
 ## Dependencies
