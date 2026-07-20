@@ -38,7 +38,7 @@
     }
 \end{center}
 
-{\small\textcolor{colorBio}{Endlessly curious software engineer student with real production experience as an apprentice and intern. I thrive on building complex systems, adapting to new technologies and challenges, and delivering solutions that make an impact.}}
+{\small\textcolor{colorBio}{Software engineering student with production experience as an apprentice and intern, focused on designing well-structured, maintainable systems and shipping clear, reliable code that delivers real product value.}}
 
 
 % ----------
@@ -48,9 +48,9 @@
 
 \resumeDescListStart
     \resumeItemWithDesc{Languages}
-        {JavaScript, TypeScript, Java, Python, CSS, HTML, C\#, SQL}
+        {Java, Python, TypeScript, JavaScript, C\#, SQL, HTML, CSS}
     \resumeItemWithDesc{Technologies}
-        {Git, Linux, React, Spring, Docker, Next.js, Nest.js, Unity}
+        {Spring, React, Next.js, gRPC, RabbitMQ, WebSocket, PostgreSQL, MongoDB, Docker, Git, Linux}
 \resumeDescListEnd
 
 \sectionGap
@@ -62,7 +62,7 @@
 \section{Education}
 
 \resumeEntry{CESI Engineering School}{Rouen, France}
-\resumeRole[CGPA: 3.94 / 4.0]{Master of Science in Computer Science and Engineering}{Oct 2025 -- Oct 2028 (Expected)}
+\resumeRole[CGPA: 3.8 / 4.0]{Master of Science in Computer Science and Engineering}{Oct 2025 -- Oct 2028 (Expected)}
 \resumeItemText{Relevant coursework: Distributed Application Development, Design Patterns, Software Architecture \& Engineering, System Programming (.NET), Software Modelling \& Versioning, SI Administration \& Security}
 \resumeItemText{Applied projects: designed and implemented distributed systems covering multithreading, non-synchronised applications, and information system security}
 
@@ -84,10 +84,11 @@
 \resumeRole{Apprentice Software Engineer}{Sep 2024 -- Present}
 \resumeItemListStart
     \resumeItem{Cut frontend build time \emsb{10× (20 min → 2 min)}, boosting deployment frequency, by migrating the build pipeline to Vite.}
+    \resumeItem{Designed and owned end-to-end a \emsb{Word-to-survey import/export engine} parsing .docx questionnaires into structured surveys (conditional logic, loops, adaptive questions), replacing \emsb{20min--3h of manual setup per survey}, unique among competitors.}
     \resumeItem{Raised test coverage across critical features, reducing production incidents, by implementing JUnit and Vitest suites for backend and frontend.}
     \resumeItem{Shipped customer-facing features used daily, reducing manual operations, by building end-to-end Java/Spring and React.js modules from requirements to production.}
     \resumeItem{Eliminated type-related runtime errors across a \emsb{15,000+ line} codebase by migrating the production frontend from JavaScript to TypeScript.}
-    \resumeItem{Expanded platform AI capabilities by integrating LangChain4j, OpenAI, and Mistral APIs into existing Java services, designing prompt flows, model orchestration APIs, and enabling features such as streaming conversations, follow-up question generation, and multilingual prompts with JSON Schema validation.}
+    \resumeItem{Built an \emsb{in-house LLM orchestration layer} (lighter LangChain4j-style clone) over OpenAI and Mistral in Java, enabling streaming conversations, follow-up generation, and multilingual prompts with JSON Schema validation.}
     \resumeItem{Built an end-to-end WhatsApp-like chatbot POC with persona selection, conversation history, file/image uploads and streaming answers, improving demo quality for AI-assisted survey analysis.}
 \resumeItemListEnd
 
@@ -95,7 +96,6 @@
 
 \resumeRole{Software Engineer Intern}{Apr 2024 -- Jun 2024}
 \resumeItemListStart
-    \resumeItem{Improved inter-service data exchange by designing and integrating a RESTful API into the backend, validated with integration tests.}
     \resumeItem{Simplified large-scale survey workflows by implementing Word import/export pipelines for questionnaires and translations, automatic REF renaming and validation, and safer handling of quotas, weights, and URL parameters in data exports.}
     \resumeItem{Improved maintainability and code quality by introducing ESLint, adding unit and integration tests on collectors and reporting logic, and refactoring legacy React components and Java services to clearer, typed and tested modules.}
     \resumeItem{Boosted team productivity by creating internal AI tools that simplified the process of organizing and analyzing open-ended survey responses including a prompt editor for refining AI queries.}
@@ -109,19 +109,19 @@
 % ----------
 \section{Projects}
 
-\resumeProject[https://github.com/clementmns/easysave]{EasySave - Open Source File Backup Software}{C\#, Avalonia, .NET 10, XUnit, GitHub Actions}
+\resumeProject[https://github.com/x-breezy/breezy]{Breezy - Full-stack social platform (microservices monorepo)}{TypeScript, Node.js, gRPC, RabbitMQ, Next.js, Docker}
 \resumeItemListStart
-    \resumeItem{Designed and implemented a modular backup engine (full + differential) using Strategy and Observer patterns with parallel execution and large-file throttling, improving throughput while protecting bandwidth on big datasets.}
-    \resumeItem{Developed structured logging infrastructure based on a pluggable Strategy-style logger (JSON/XML) and an optional TCP remote logging server (Docker) supporting multi-users, enabling centralized per-day log aggregation across backup jobs.}
-    \resumeItem{Architected the full, multi-threaded backup platform end-to-end using layered architecture, MVVM (GUI), and Singleton-style shared services, producing UML diagrams that guided six decoupled components (core engine, GUI, CLI, logging stack, encryption tool, log server) and supported safe concurrent execution of multiple backup jobs.}
+    \resumeItem{\emsb{Led a team of 4} as tech lead and project manager, architecting an 8-service microservices platform with per-service databases and gRPC + RabbitMQ communication behind an Nginx gateway.}
+    \resumeItem{Built \emsb{real-time messaging over WebSocket} (1-to-1 and group, read receipts) and live notifications via SSE and Web Push, plus video streaming with HTTP range requests.}
+    \resumeItem{Instrumented full observability with Prometheus, Grafana, and OpenTelemetry/Jaeger, and set up CI via GitHub Actions with an aggregated OpenAPI spec across services.}
 \resumeItemListEnd
 
 \innerSectionGap
 
-\resumeProject{ALM Vote Manager - Associative vote application}{TypeScript, Next.js, Drizzle}
+\resumeProject[https://github.com/clementmns/easysave]{EasySave - Open Source File Backup Software}{C\#, Avalonia, .NET 10, XUnit, GitHub Actions}
 \resumeItemListStart
-    \resumeItem{Designed and built a web app for a basketball club to elect MVPs, providing a frictionless user panel for few‑taps voting on mobile.}
-    \resumeItem{Implemented a Next.js + Drizzle API and database schema optimized to handle \emsb{+ 100 votes per minute} without timeouts, ensuring consistent write performance and real‑time tally updates during peak traffic.}
+    \resumeItem{Designed a \emsb{multi-threaded} backup engine (full + differential) using \emsb{Strategy and Observer patterns} with parallel execution and large-file throttling, supporting safe concurrent execution of multiple backup jobs.}
+    \resumeItem{Architected the platform end-to-end with layered architecture, MVVM, and Singleton-style shared services, producing UML diagrams that guided six decoupled components (core engine, GUI, CLI, logging, encryption, log server).}
 \resumeItemListEnd
 
 \sectionGap
@@ -143,7 +143,7 @@
 % INTERESTS
 % -----------
 \section{Interests}
-\resumeItemText{Kung Fu, Music (Kora \& trumpet player), Running, Chess}
+\resumeItemText{Kung Fu, Music (Kora \& trumpet player), Hiking}
 
 
 \end{document}
