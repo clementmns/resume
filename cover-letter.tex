@@ -1,0 +1,80 @@
+%-------------------------
+% LaTeX Cover Letter
+% Author : Clément Omnès
+% License : MIT
+% Language : English
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\input{config/config}
+\input{config/style}
+\input{config/commands}
+
+% Extra padding around the letter (tighter resume margins don't suit a letter)
+\addtolength{\oddsidemargin}{0.5in}
+\addtolength{\evensidemargin}{0.5in}
+\addtolength{\textwidth}{-1in}
+\addtolength{\topmargin}{0.4in}
+\addtolength{\textheight}{-0.8in}
+
+\usepackage{setspace}
+\setstretch{1.15}
+
+\usepackage{ragged2e}
+
+% Human-feeling paragraphs: breathing room + first-line indent
+\setlength{\parskip}{0.9em plus 0.1em minus 0.1em}
+
+% -------------------------------------------
+% COVER LETTER STARTS HERE
+% -------------------------------------------
+
+\begin{document}
+\justifying
+\setlength{\parindent}{1.4em}
+
+
+% ----------
+% HEADER
+% ----------
+{\huge\textcolor{colorName}{\embd{Clément Omnès}}} \\[4pt]
+{\color{colorRole}Software Engineering Student} \\[8pt]
+{\small\color{colorHeader}%
+    \iconWithText{\faEnvelope}{\href{mailto:contact@clementomnes.dev}{contact@clementomnes.dev}} \\[4pt]%
+    \iconWithText{\faPhone}{\href{tel:\resumePhoneLink}{\resumePhone}}%
+}
+
+\vspace{4em}
+
+
+% ----------
+% BODY
+% ----------
+\noindent\textcolor{colorBody}{Dear Sir or Madam,}
+
+\textcolor{colorBody}{Computer science has been the one constant running through every chapter of my education so far, and it is exactly that thread which draws me to your teams for an R\&D internship starting in June 2027. I am a computer science engineering student at CESI Rouen in France, and I am reaching out to express my strong interest in contributing to your work.}
+
+\textcolor{colorBody}{Before my engineering studies, I earned a Bachelor's degree in Multimedia and Internet Technologies (BUT MMI). That path gave me something I do not take for granted: a genuine product sense, built early by designing interfaces, thinking through user experience end-to-end, and asking why a product should exist before writing a single line of code for it. I carried that instinct into my engineering degree, where I now build backend and full-stack systems in Java, Python, TypeScript and modern web technologies --- always trying to keep sight of the person who will actually use what I ship.}
+
+\textcolor{colorBody}{Today, as an apprentice software engineer at R3mScore, I work inside a small team, which taught me to move fast, own features end-to-end, and take responsibility with almost no distance between me and the decision. What I am looking for now is the other side of that experience: seeing how a larger organization structures collaboration across dozens of engineers, aligns them around a shared architecture, and turns ambitious ideas into products that solve real-world problems at scale. I want to learn that discipline from the inside, and bring with me what I already know about ownership and product thinking.}
+
+\textcolor{colorBody}{The internship I am applying for spans 17 weeks across two complementary phases, ideally carried out within the same organization:}
+
+\resumeItemListStart
+    \resumeItem{A 5-week research initiation, working within a research team under the supervision of a research profile (research engineer, researcher, or academic advisor).}
+    \resumeItem{A 12-week international mobility period, which can either continue on the research track or shift toward software development and product work.}
+\resumeItemListEnd
+
+\textcolor{colorBody}{I would be glad to bring my curiosity, my product instinct, and my hands-on engineering experience to your teams, and to grow within an international, technically demanding environment working on problems that matter at scale. I am attaching my resume and would welcome the chance to discuss how my profile could fit your teams.}
+
+\textcolor{colorBody}{Thank you very much for your time and consideration.}
+
+\vspace{0.5em}
+
+\noindent\textcolor{colorBody}{Kind regards,}
+
+\noindent\textcolor{colorBody}{Clément Omnès}
+
+
+\end{document}
