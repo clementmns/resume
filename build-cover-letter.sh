@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# Usage: ./build.sh [variant]
-#   ./build.sh              -> resume.tex
-#   ./build.sh resume-bank  -> resume-bank.tex
+# Usage: ./build-cover-letter.sh [variant]
+#   ./build-cover-letter.sh                     -> cover-letter.tex
+#   ./build-cover-letter.sh cover-letter-google -> cover-letter-google.tex
 
-VARIANT="${1:-resume}"
+VARIANT="${1:-cover-letter}"
 VARIANT="${VARIANT%.tex}"
 
 if [ ! -f "${VARIANT}.tex" ]; then
@@ -12,8 +12,8 @@ if [ ! -f "${VARIANT}.tex" ]; then
     exit 1
 fi
 
-if [ "$VARIANT" = "resume" ]; then
-    OUTPUT="clement-omnes-resume"
+if [ "$VARIANT" = "cover-letter" ]; then
+    OUTPUT="clement-omnes-cover-letter"
 else
     OUTPUT="clement-omnes-${VARIANT}"
 fi

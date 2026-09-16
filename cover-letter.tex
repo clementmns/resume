@@ -1,0 +1,78 @@
+%-------------------------
+% LaTeX Cover Letter - General
+% Author : Clément Omnès
+% License : MIT
+% Language : English
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\input{config/config}
+\input{config/style}
+\input{config/commands}
+
+% Extra padding around the letter (tighter resume margins don't suit a letter)
+\addtolength{\oddsidemargin}{0.5in}
+\addtolength{\evensidemargin}{0.5in}
+\addtolength{\textwidth}{-1in}
+\addtolength{\topmargin}{0.4in}
+\addtolength{\textheight}{-0.8in}
+
+\usepackage{setspace}
+\setstretch{1.1}
+
+\usepackage{ragged2e}
+
+% Human-feeling paragraphs: breathing room + first-line indent
+\setlength{\parskip}{0.7em plus 0.1em minus 0.1em}
+
+% -------------------------------------------
+% COVER LETTER STARTS HERE
+% -------------------------------------------
+
+\begin{document}
+\justifying
+\setlength{\parindent}{1.4em}
+
+
+% ----------
+% HEADER
+% ----------
+{\huge\textcolor{colorName}{\embd{Clément Omnès}}} \\[4pt]
+{\color{colorRole}Software Engineering Student} \\[8pt]
+{\small\color{colorHeader}%
+    \iconWithText{\faMapMarker*}{Rouen, France} \\[4pt]%
+    \iconWithText{\faEnvelope}{\href{mailto:contact@clementomnes.dev}{contact@clementomnes.dev}} \\[4pt]%
+    \iconWithText{\faPhone}{\href{tel:\resumePhoneLink}{\resumePhone}}%
+}
+
+\vspace{1.6em}
+
+\noindent\textcolor{colorBody}{\today}
+
+\vspace{0.6em}
+
+
+% ----------
+% BODY
+% ----------
+\noindent\textcolor{colorBody}{Dear Hiring Manager,}
+
+\textcolor{colorBody}{I am writing to apply for a software engineering internship with your team, starting in June 2027. I am a computer science engineering student at CESI in France, where I maintain a 3.8/4.0 GPA, and I have spent the last two years working as an apprentice software engineer on a production codebase. I am looking for an internship where I can own real features end to end and learn from engineers building at a larger scale than I have worked at so far.}
+
+\textcolor{colorBody}{At R3mScore, I build and ship features that customers use the same week. I designed and delivered a Word-to-survey import and export engine on my own, from requirements to production. It parses .docx questionnaires into structured surveys with conditional logic, loops and adaptive questions, and it replaces up to three hours of manual setup per survey. I also migrated a 15,000-line frontend from JavaScript to TypeScript incrementally, with no feature freeze and no regression in production, and added JUnit and Vitest coverage on the critical paths. Working this way taught me to keep a codebase releasable at every commit and to know which parts of a system I have not yet proven correct.}
+
+\textcolor{colorBody}{My projects are where I go after the problems a product codebase does not hand me. As tech lead on a team of four, I architected an eight-service distributed platform with gRPC and RabbitMQ messaging, one database per service behind an Nginx gateway, and distributed tracing through OpenTelemetry. I wanted to see where a distributed system actually breaks: partial failure, retries, and the gap between what a trace shows and what a log shows. I also built a concurrent backup engine in C\#, with parallel job execution, large-file throttling and safe access to shared state. It is where I learned that concurrency is a design problem long before it becomes a debugging problem.}
+
+\textcolor{colorBody}{What I am looking for in an internship is a team whose code I can be genuinely useful in, and whose engineers will tell me when my first design is wrong. My day-to-day stack is Java and Spring with SQL and React on either side of it, and I use Python, TypeScript and C\# regularly, but I care less about which stack I land in than about working on a product with real users and constraints that matter. I also run my own infrastructure on a self-hosted Linux VPS, with containerised services behind Cloudflare Zero Trust, mostly because it is the fastest way I have found to learn how things break in production. One practical point I would rather raise early: my school sets my internship dates, which run from 7 June to 10 October 2027 with no flexibility on either end, and my programme combines the international placement with a research component, so the internship must take place in a research laboratory or an R\&D team under the supervision of an engineer or researcher.}
+
+\textcolor{colorBody}{I would bring two years of production experience, a habit of owning features end to end, and the willingness to ask questions until I actually understand the system I am changing. My resume is attached, and I would be glad to discuss how my background fits your team, or how the programme dates could work. Please feel free to reach out by email at contact@clementomnes.dev or by phone at \resumePhone. Thank you for your time and consideration.}
+
+\vspace{0.5em}
+
+\noindent\textcolor{colorBody}{Sincerely,}
+
+\noindent\textcolor{colorBody}{Clément Omnès}
+
+
+\end{document}
