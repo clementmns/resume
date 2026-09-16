@@ -29,16 +29,20 @@
         \hspace{1.2em}%
         \iconWithText{\faPhone}{\href{tel:\resumePhoneLink}{\resumePhone}}%
         \hspace{1.2em}%
-        \iconWithText{\faFlag}{French citizen}\\[2pt]%
+        \iconWithText{\faFlag}{French citizen}%
+        \hspace{1.2em}%
+        \iconWithText{\faGraduationCap}{Graduating Oct 2028}\\[2pt]%
         \iconWithText{\faGithub}{\href{https://github.com/clementomnes}{github.com/clementomnes}}%
         \hspace{1.2em}%
         \iconWithText{\faLinkedin}{\href{https://linkedin.com/in/clementomnes}{linkedin.com/in/clementomnes}}%
         \hspace{1.2em}%
         \iconWithText{\faGlobe}{\href{https://clementomnes.dev}{clementomnes.dev}}%
+        \hspace{1.2em}%
+        \iconWithText{\faCalendarCheck}{Available Jun 7 -- Oct 10, 2027 (18 weeks)}%
     }
 \end{center}
 
-{\small\textcolor{colorBio}{Software engineering student with production experience as an apprentice and intern, focused on designing well-structured, maintainable systems and shipping clear, reliable code that delivers real product value.}}
+{\small\textcolor{colorBio}{Software engineering student with production experience as an apprentice and intern, focused on backend and full-stack systems: distributed services, concurrency, and large production codebases shipped and maintained under continuous change.}}
 
 
 % ----------
@@ -47,10 +51,12 @@
 \section{Skills}
 
 \resumeDescListStart
-    \resumeItemWithDesc{Languages}
+    \resumeItemWithDesc{Programming}
         {Java, Python, TypeScript, JavaScript, C\#, SQL, HTML, CSS}
     \resumeItemWithDesc{Technologies}
-        {Spring, React, Next.js, gRPC, RabbitMQ, WebSocket, PostgreSQL, MongoDB, Docker, Git, Linux}
+        {Spring, React, Next.js, gRPC, RabbitMQ, WebSocket, PostgreSQL, MongoDB, Git}
+    \resumeItemWithDesc{Infrastructure}
+        {Oracle Cloud Infrastructure, Docker, Linux, Cloudflare Zero Trust, GitHub Actions CI/CD}
 \resumeDescListEnd
 
 \sectionGap
@@ -83,13 +89,12 @@
 \resumeEntry{R3mScore}{Rouen, France}
 \resumeRole{Apprentice Software Engineer}{Sep 2024 -- Present}
 \resumeItemListStart
-    \resumeItem{Cut frontend build time \emsb{10× (20 min → 2 min)}, boosting deployment frequency, by migrating the build pipeline to Vite.}
     \resumeItem{Designed and owned end-to-end a \emsb{Word-to-survey import/export engine} parsing .docx questionnaires into structured surveys (conditional logic, loops, adaptive questions), replacing \emsb{20min--3h of manual setup per survey}, unique among competitors.}
+    \resumeItem{Eliminated type-related runtime errors across a \emsb{15,000+ line} production codebase by migrating the frontend from JavaScript to TypeScript incrementally, with \emsb{no feature freeze and no regression in production}.}
     \resumeItem{Raised test coverage across critical features, reducing production incidents, by implementing JUnit and Vitest suites for backend and frontend.}
+    \resumeItem{Cut frontend build time \emsb{10× (20 min → 2 min)}, boosting deployment frequency, by migrating the build pipeline to Vite.}
     \resumeItem{Shipped customer-facing features used daily, reducing manual operations, by building end-to-end Java/Spring and React.js modules from requirements to production.}
-    \resumeItem{Eliminated type-related runtime errors across a \emsb{15,000+ line} codebase by migrating the production frontend from JavaScript to TypeScript.}
     \resumeItem{Built an \emsb{in-house LLM orchestration layer} (lighter LangChain4j-style clone) over OpenAI and Mistral in Java, enabling streaming conversations, follow-up generation, and multilingual prompts with JSON Schema validation.}
-    \resumeItem{Built an end-to-end WhatsApp-like chatbot POC with persona selection, conversation history, file/image uploads and streaming answers, improving demo quality for AI-assisted survey analysis.}
 \resumeItemListEnd
 
 \innerSectionGap
@@ -111,7 +116,7 @@
 
 \resumeProject[https://github.com/x-breezy/breezy]{Breezy - Full-stack social platform (microservices monorepo)}{TypeScript, Node.js, gRPC, RabbitMQ, Next.js, Docker}
 \resumeItemListStart
-    \resumeItem{\emsb{Led a team of 4} as tech lead and project manager, architecting an 8-service microservices platform with per-service databases and gRPC + RabbitMQ communication behind an Nginx gateway.}
+    \resumeItem{\emsb{Tech lead on a team of 4}, architecting an 8-service microservices platform with per-service databases and gRPC + RabbitMQ communication behind an Nginx gateway.}
     \resumeItem{Built \emsb{real-time messaging over WebSocket} (1-to-1 and group, read receipts) and live notifications via SSE and Web Push, plus video streaming with HTTP range requests.}
     \resumeItem{Instrumented full observability with Prometheus, Grafana, and OpenTelemetry/Jaeger, and set up CI via GitHub Actions with an aggregated OpenAPI spec across services.}
 \resumeItemListEnd
@@ -120,7 +125,7 @@
 
 \resumeProject[https://github.com/clementmns/easysave]{EasySave - Open Source File Backup Software}{C\#, Avalonia, .NET 10, XUnit, GitHub Actions}
 \resumeItemListStart
-    \resumeItem{Designed a \emsb{multi-threaded} backup engine (full + differential) using \emsb{Strategy and Observer patterns} with parallel execution and large-file throttling, supporting safe concurrent execution of multiple backup jobs.}
+    \resumeItem{Built a \emsb{concurrent} backup engine (full + differential) with \emsb{parallel job execution}, large-file throttling and \emsb{safe shared-state access}, using Strategy and Observer patterns.}
     \resumeItem{Architected the platform end-to-end with layered architecture, MVVM, and Singleton-style shared services, producing UML diagrams that guided six decoupled components (core engine, GUI, CLI, logging, encryption, log server).}
 \resumeItemListEnd
 
@@ -142,8 +147,9 @@
 % -----------
 % INTERESTS
 % -----------
-\section{Interests}
-\resumeItemText{Kung Fu, Music (Kora \& trumpet player), Hiking}
+\section{Languages \& Interests}
+\resumeItemText{\emsb{Languages:} French (native), English (professional working proficiency)}
+\resumeItemText{\emsb{Interests:} Kung Fu, Music (Kora \& trumpet player), Hiking}
 
 
 \end{document}

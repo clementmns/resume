@@ -21,3 +21,7 @@ semicolon_delimited_script
 
 # Secrets:
 .env
+
+# Company-specific variants (resume.tex and cover-letter.tex stay tracked):
+resume-*.tex
+cover-letter-*.tex

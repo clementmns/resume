@@ -1,5 +1,5 @@
 %-------------------------
-% LaTeX Cover Letter
+% LaTeX Cover Letter - General
 % Author : Clément Omnès
 % License : MIT
 % Language : English
@@ -19,12 +19,12 @@
 \addtolength{\textheight}{-0.8in}
 
 \usepackage{setspace}
-\setstretch{1.15}
+\setstretch{1.1}
 
 \usepackage{ragged2e}
 
 % Human-feeling paragraphs: breathing room + first-line indent
-\setlength{\parskip}{0.9em plus 0.1em minus 0.1em}
+\setlength{\parskip}{0.7em plus 0.1em minus 0.1em}
 
 % -------------------------------------------
 % COVER LETTER STARTS HERE
@@ -41,38 +41,36 @@
 {\huge\textcolor{colorName}{\embd{Clément Omnès}}} \\[4pt]
 {\color{colorRole}Software Engineering Student} \\[8pt]
 {\small\color{colorHeader}%
+    \iconWithText{\faMapMarker*}{Rouen, France} \\[4pt]%
     \iconWithText{\faEnvelope}{\href{mailto:contact@clementomnes.dev}{contact@clementomnes.dev}} \\[4pt]%
     \iconWithText{\faPhone}{\href{tel:\resumePhoneLink}{\resumePhone}}%
 }
 
-\vspace{4em}
+\vspace{1.6em}
+
+\noindent\textcolor{colorBody}{\today}
+
+\vspace{0.6em}
 
 
 % ----------
 % BODY
 % ----------
-\noindent\textcolor{colorBody}{Dear Sir or Madam,}
+\noindent\textcolor{colorBody}{Dear Hiring Manager,}
 
-\textcolor{colorBody}{Computer science has been the one constant running through every chapter of my education so far, and it is exactly that thread which draws me to your teams for an R\&D internship starting in June 2027. I am a computer science engineering student at CESI in France, and I am reaching out to express my strong interest in contributing to your work.}
+\textcolor{colorBody}{I am writing to apply for a software engineering internship with your team, starting in June 2027. I am a computer science engineering student at CESI in France, where I maintain a 3.8/4.0 GPA, and I have spent the last two years working as an apprentice software engineer on a production codebase. I am looking for an internship where I can own real features end to end and learn from engineers building at a larger scale than I have worked at so far.}
 
-\textcolor{colorBody}{Before my engineering studies, I earned a Bachelor's degree in Multimedia and Internet Technologies (BUT MMI). That path gave me something I do not take for granted: a genuine product sense, built early by designing interfaces, thinking through user experience end-to-end, and asking why a product should exist before writing a single line of code for it. I carried that instinct into my engineering degree, where I now build backend and full-stack systems in Java, TypeScript and modern web technologies, always trying to keep sight of the person who will actually use what I ship.}
+\textcolor{colorBody}{At R3mScore, I build and ship features that customers use the same week. I designed and delivered a Word-to-survey import and export engine on my own, from requirements to production. It parses .docx questionnaires into structured surveys with conditional logic, loops and adaptive questions, and it replaces up to three hours of manual setup per survey. I also migrated a 15,000-line frontend from JavaScript to TypeScript incrementally, with no feature freeze and no regression in production, and added JUnit and Vitest coverage on the critical paths. Working this way taught me to keep a codebase releasable at every commit and to know which parts of a system I have not yet proven correct.}
 
-\textcolor{colorBody}{Today, as an apprentice software engineer at R3mScore, ownership means designing a feature end-to-end and shipping it myself, like the Word-to-survey import/export engine I built, turning .docx questionnaires into structured surveys and cutting setup from up to 3 hours of manual work down to a few clicks. It taught me to move fast and take responsibility with almost no distance between me and the decision, working inside a small team. What I am looking for now is the other side of that experience: seeing how a larger organization structures collaboration across dozens of engineers, aligns them around a shared architecture, and turns ambitious ideas into products that solve real-world problems. I want to learn that discipline from the inside, and bring with me what I already know about ownership and product thinking.}
+\textcolor{colorBody}{My projects are where I go after the problems a product codebase does not hand me. As tech lead on a team of four, I architected an eight-service distributed platform with gRPC and RabbitMQ messaging, one database per service behind an Nginx gateway, and distributed tracing through OpenTelemetry. I wanted to see where a distributed system actually breaks: partial failure, retries, and the gap between what a trace shows and what a log shows. I also built a concurrent backup engine in C\#, with parallel job execution, large-file throttling and safe access to shared state. It is where I learned that concurrency is a design problem long before it becomes a debugging problem.}
 
-\textcolor{colorBody}{The internship I am applying for spans 17 weeks across two complementary phases, ideally carried out within the same organization:}
+\textcolor{colorBody}{What I am looking for in an internship is a team whose code I can be genuinely useful in, and whose engineers will tell me when my first design is wrong. My day-to-day stack is Java and Spring with SQL and React on either side of it, and I use Python, TypeScript and C\# regularly, but I care less about which stack I land in than about working on a product with real users and constraints that matter. I also run my own infrastructure on a self-hosted Linux VPS, with containerised services behind Cloudflare Zero Trust, mostly because it is the fastest way I have found to learn how things break in production. One practical point I would rather raise early: my school sets my internship dates, which run from 7 June to 10 October 2027 with no flexibility on either end, and my programme combines the international placement with a research component, so the internship must take place in a research laboratory or an R\&D team under the supervision of an engineer or researcher.}
 
-\resumeItemListStart
-    \resumeItem{A 5-week research initiation, working within a research team under the supervision of a research profile (research engineer, researcher, or academic advisor).}
-    \resumeItem{A 12-week international mobility period, which can either continue on the research track or shift toward software development and product work.}
-\resumeItemListEnd
-
-\textcolor{colorBody}{I would be glad to bring my curiosity, my product instinct, and my hands-on engineering experience to your teams, and to grow within an international, technically demanding environment working on problems that matter at scale. I am attaching my resume and would welcome the chance to discuss how my profile could fit your teams.}
-
-\noindent\textcolor{colorBody}{Thank you very much for your time and consideration.}
+\textcolor{colorBody}{I would bring two years of production experience, a habit of owning features end to end, and the willingness to ask questions until I actually understand the system I am changing. My resume is attached, and I would be glad to discuss how my background fits your team, or how the programme dates could work. Please feel free to reach out by email at contact@clementomnes.dev or by phone at \resumePhone. Thank you for your time and consideration.}
 
 \vspace{0.5em}
 
-\noindent\textcolor{colorBody}{Kind regards,}
+\noindent\textcolor{colorBody}{Sincerely,}
 
 \noindent\textcolor{colorBody}{Clément Omnès}
 
