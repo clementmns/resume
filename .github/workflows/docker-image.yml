@@ -24,6 +24,8 @@ jobs:
             PHONE_LINK="${PHONE_LINK:-+33XXXXXXXXX}"
             pdflatex -jobname clement-omnes-resume "\def\resumePhone{$PHONE}\def\resumePhoneLink{$PHONE_LINK}\input{resume}"
             pdflatex -jobname clement-omnes-cover-letter "\def\resumePhone{$PHONE}\def\resumePhoneLink{$PHONE_LINK}\input{cover-letter}"
+            pdflatex -jobname clement-omnes-resume-research "\def\resumePhone{$PHONE}\def\resumePhoneLink{$PHONE_LINK}\input{resume-research}"
+            pdflatex -jobname clement-omnes-cover-letter-research "\def\resumePhone{$PHONE}\def\resumePhoneLink{$PHONE_LINK}\input{cover-letter-research}"
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "feat(pdf): update resume and cover letter pdfs"
