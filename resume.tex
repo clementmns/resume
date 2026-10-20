@@ -38,11 +38,15 @@
         \hspace{1.2em}%
         \iconWithText{\faGlobe}{\href{https://clementomnes.dev}{clementomnes.dev}}%
         \hspace{1.2em}%
-        \iconWithText{\faCalendarCheck}{Available Jun 7 -- Oct 10, 2027 (18 weeks)}%
+        \iconWithText{\faCalendarCheck}{Available May 3 -- Oct 15, 2027 (\ifdefined\researchVariant 17\else 12\fi+ weeks)}%
     }
 \end{center}
 
+\ifdefined\researchVariant
+{\small\textcolor{colorBio}{Software engineering student with production experience as an apprentice and intern, seeking a research internship in distributed systems and concurrency, with an experimental approach: implementing competing designs, measuring them, and turning prototypes into tested code.}}
+\else
 {\small\textcolor{colorBio}{Software engineering student with production experience as an apprentice and intern, focused on backend and full-stack systems: distributed services, concurrency, and large production codebases shipped and maintained under continuous change.}}
+\fi
 
 
 % ----------
@@ -54,7 +58,7 @@
     \resumeItemWithDesc{Programming}
         {Java, Python, TypeScript, JavaScript, C\#, SQL, HTML, CSS}
     \resumeItemWithDesc{Technologies}
-        {Spring, React, Next.js, gRPC, RabbitMQ, WebSocket, PostgreSQL, MongoDB, Git}
+        {Spring, React, Next.js, gRPC, RabbitMQ, WebSocket, PostgreSQL, MongoDB, Git, Claude Code (agentic AI coding)}
     \resumeItemWithDesc{Infrastructure}
         {Oracle Cloud Infrastructure, Docker, Linux, Cloudflare Zero Trust, GitHub Actions CI/CD}
 \resumeDescListEnd
@@ -123,11 +127,19 @@
 
 \innerSectionGap
 
+\ifdefined\researchVariant
+\resumeProject[https://github.com/clementmns/tsp-resolver]{TSP Resolver - Metaheuristics for a constrained Traveling Salesman Problem}{Python, NumPy, Pandas, NetworkX}
+\resumeItemListStart
+    \resumeItem{Implemented \emsb{Tabu Search} (standard and 2-opt) and \emsb{multi-start Simulated Annealing} in a team of 5, for a TSP variant with forbidden nodes, precedence constraints and toll costs.}
+    \resumeItem{Built the \emsb{statistical analysis framework} comparing the team's metaheuristics on instances from \emsb{5 to 3,000 nodes} over multiple random seeds, showing that only 2-opt Tabu Search and multi-start Simulated Annealing improved their optimality gap as instances grew.}
+\resumeItemListEnd
+\else
 \resumeProject[https://github.com/clementmns/easysave]{EasySave - Open Source File Backup Software}{C\#, Avalonia, .NET 10, XUnit, GitHub Actions}
 \resumeItemListStart
     \resumeItem{Built a \emsb{concurrent} backup engine (full + differential) with \emsb{parallel job execution}, large-file throttling and \emsb{safe shared-state access}, using Strategy and Observer patterns.}
     \resumeItem{Architected the platform end-to-end with layered architecture, MVVM, and Singleton-style shared services, producing UML diagrams that guided six decoupled components (core engine, GUI, CLI, logging, encryption, log server).}
 \resumeItemListEnd
+\fi
 
 \sectionGap
 
